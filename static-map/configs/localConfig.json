@@ -48,6 +48,125 @@
                     "shouldLoadFont": false,
                     "fonts": null
                 }
+            },
+            {
+                "name": "Version"
+            },
+            {
+                "name": "DrawerMenu"
+            },
+            {
+                "name": "BackgroundSelector",
+                "cfg": {
+                    "bottom": 25,
+                    "dimensions": {
+                        "side": 65,
+                        "sidePreview": 65,
+                        "frame": 3,
+                        "margin": 5,
+                        "label": false,
+                        "vertical": true
+                    }
+                }
+            },
+            {
+                "name": "Identify",
+                "showIn": [
+                    "Settings"
+                ],
+                "cfg": {
+                    "showFullscreen": true,
+                    "position": "bottom",
+                    "size": 0.5,
+                    "fluid": true,
+                    "viewerOptions": {
+                        "container": "{context.ReactSwipe}"
+                    }
+                }
+            },
+            {
+                "name": "Locate",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": true
+                    }
+                }
+            },
+            {
+                "name": "TOC",
+                "cfg": {
+                    "activateMetedataTool": false,
+                    "activateMapTitle": false,
+                    "activateSortLayer": false,
+                    "activateLayerFilterTool": false,
+                    "activateQueryTool": false
+                }
+            },
+            {
+                "name": "TOCItemsSettings",
+                "cfg": {
+                    "width": 300
+                }
+            },
+            {
+                "name": "Tutorial",
+                "cfg": {
+                    "preset": "default_mobile_tutorial"
+                }
+            },
+            {
+                "name": "Settings",
+                "cfg": {
+                    "wrap": true
+                }
+            },
+            {
+                "name": "Search",
+                "cfg": {
+                    "showOptions": false,
+                    "withToggle": [
+                        "max-width: 768px",
+                        "min-width: 768px"
+                    ]
+                }
+            },
+            {
+                "name": "Toolbar",
+                "id": "NavigationBar",
+                "cfg": {
+                    "id": "navigationBar"
+                }
+            },
+            {
+                "name": "ZoomAll"
+            },
+            {
+                "name": "MapLoading",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": true
+                    }
+                }
+            },
+            {
+                "name": "FullScreen",
+                "override": {
+                    "Toolbar": {
+                        "alwaysVisible": false
+                    }
+                }
+            },
+            {
+                "name": "OmniBar"
+            },
+            {
+                "name": "BurgerMenu"
+            },
+            {
+                "name": "Expander"
+            },
+            {
+                "name": "GlobeViewSwitcher"
             }
         ],
         "viewer": [

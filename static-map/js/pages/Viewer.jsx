@@ -11,7 +11,6 @@ import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import url from 'url';
 import Page from '@mapstore/framework/containers/Page';
-import { withResizeDetector } from 'react-resize-detector';
 
 const urlQuery = url.parse(window.location.href, true).query;
 
@@ -28,7 +27,7 @@ function Viewer({
     match,
     isMobile
 }) {
-    const mode = (isMobile || window.innerWidth < 769)
+    const mode = isMobile
         ? 'simple-viewer'
         : 'viewer';
     return (
@@ -56,6 +55,6 @@ const ConnectedViewer = connect(
     ], (isMobile) => ({
         isMobile
     }))
-)(withResizeDetector(Viewer));
+)(Viewer);
 
 export default ConnectedViewer;
