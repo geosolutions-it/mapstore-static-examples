@@ -4,6 +4,10 @@ This repository is an example of the map viewer of MapStore used as static clien
 
 ## How to install a custom MapStore (experimental)
 
+### Steps
+
+This section shows how this repository has been setup
+
 - run the creation script 
 
 `npx @mapstore/project`
@@ -54,6 +58,12 @@ This repository is an example of the map viewer of MapStore used as static clien
 - ensure to be inside the project folder root and then install all the dependencies with
 
 `npm install`
+
+### Best practices
+
+Here some suggestions on how to improve the setup of a custom project:
+
+- ensure all the configuration path are initialized correctly. An example are the symbols for annotation and their location in the repository.
 
 ## Development
 

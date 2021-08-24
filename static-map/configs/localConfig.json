@@ -43,7 +43,9 @@
                         "scalebar": {
                             "container": "#footer-scalebar-container"
                         }
-                    }
+                    },
+                    "shouldLoadFont": false,
+                    "fonts": null
                 }
             }
         ],
@@ -92,7 +94,8 @@
             {
                 "name": "Annotations",
                 "cfg": {
-                    "measurementAnnotationEdit": false
+                    "measurementAnnotationEdit": false,
+                    "symbolsPath": "assets/symbols/"
                 }
             },
             {

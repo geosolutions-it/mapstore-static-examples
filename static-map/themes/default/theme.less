@@ -1,6 +1,9 @@
 @import "~mapstore/web/client/themes/default/theme.less";
 @import "variables.less";
 
+// include font-awesome to preload icons for annotations
+@import '~font-awesome/css/font-awesome.min.css';
+
 .static-map,
 .page,
 #container {
@@ -10,4 +13,8 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+#mapstore-burger-menu .dropdown-menu {
+    z-index: 1020;
 }

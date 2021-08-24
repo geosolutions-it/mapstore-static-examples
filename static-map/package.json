@@ -42,6 +42,7 @@
     "@mapstore/project": "1.0.18"
   },
   "dependencies": {
+    "font-awesome": "4.7.0",
     "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#2021.02.xx"
   },
   "mapstore": {
