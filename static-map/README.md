@@ -71,6 +71,7 @@ Here some suggestions on how to improve the setup of a custom project:
 
 - use the alias `@js/` to have access to the components inside the js folder of the custom project
 
+- use the options available in the main entries to initialize the state of the app with particular conditions (an example is the security state)
 ## Development
 
 - `npm install`

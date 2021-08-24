@@ -18,6 +18,7 @@
         }
     ],
     "projectionDefs": [],
+    "authenticationRules": [],
     "plugins": {
         "simple-viewer": [
             {
@@ -257,7 +258,7 @@
                         "EPSG:3857"
                     ],
                     "allowedRoles": [
-                        "ADMIN"
+                        "ALL"
                     ]
                 }
             },

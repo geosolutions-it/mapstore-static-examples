@@ -16,6 +16,7 @@ import axios from '@mapstore/framework/libs/ajax';
 import Viewer from '@js/pages/Viewer';
 import { configureMap } from '@mapstore/framework/actions/config';
 import { setControlProperty } from '@mapstore/framework/actions/controls';
+import security from '@mapstore/framework/reducers/security';
 
 setLocalConfigurationFile('configs/localConfig.json');
 setConfigProp('translationsPath', ['translations', 'ms-translations']);
@@ -54,6 +55,15 @@ const pages = [{
 }];
 
 document.addEventListener('DOMContentLoaded', function() {
+    // example of initial security state
+    // with null this state is not initialized
+    const user = null;
+    const securityState = user && {
+        security: {
+            user: user,
+            token: '' // this token is applied to the request defined in the localConfig authenticationRules properties
+        }
+    };
     // load a base map configuration
     axios.get('configs/map.json')
         .then(({ data }) => {
@@ -63,12 +73,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 pages,
                 initialState: {
                     defaultState: {
+                        ...securityState,
                         maptype: {
                             mapType: 'openlayers'
                         }
                     }
                 },
-                appReducers: {},
+                appReducers: {
+                    security
+                },
                 appEpics: {},
                 printingEnabled: false
             },
