@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import url from 'url';
-import Page from '@mapstore/framework/containers/Page';
+import MapViewer from '@mapstore/framework/containers/MapViewer';
+import { getConfigProp } from '@mapstore/framework/utils/ConfigUtils';
 
 const urlQuery = url.parse(window.location.href, true).query;
 
@@ -30,10 +31,11 @@ function Viewer({
     const mode = isMobile
         ? 'simple-viewer'
         : 'viewer';
+    const pluginsConfig = (getConfigProp('plugins') || {})?.[mode];
     return (
-        <Page
-            id={mode}
-            includeCommon={false}
+        <MapViewer
+            className={`page page-${mode}`}
+            pluginsConfig={pluginsConfig}
             plugins={plugins}
             params={match.params}
         />

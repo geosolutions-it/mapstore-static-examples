@@ -6,6 +6,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// add this binding to ensure all the streams inside components are working
+import '@mapstore/framework/libs/bindings/rxjsRecompose';
+
 import main from '@mapstore/framework/product/main';
 import pluginsDef from '@js/plugins/def';
 import {
