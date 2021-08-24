@@ -1,0 +1,1 @@
+(self.webpackChunkstatic_map=self.webpackChunkstatic_map||[]).push([[437],{26049:(a,e,t)=>{"use strict";t.r(e),t.d(e,{default:()=>c});const{createSink:s}=t(2479),c=()=>(t(12019),{Map:t(18187).Z,Layer:t(2272).Z,Feature:s((()=>{}))})}}]);
