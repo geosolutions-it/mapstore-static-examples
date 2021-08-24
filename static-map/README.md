@@ -2,6 +2,8 @@
 
 This repository is an example of the map viewer of MapStore used as static client
 
+demo: https://geosolutions-it.github.io/mapstore-static-examples/static-map/dist/index.html#/
+
 ## How to install a custom MapStore (experimental)
 
 ### Steps
