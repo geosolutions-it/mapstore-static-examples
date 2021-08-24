@@ -7,7 +7,7 @@
  */
 
 import main from '@mapstore/framework/product/main';
-import pluginsDef from '@mapstore/framework/product/plugins';
+import pluginsDef from '@js/plugins/def';
 import {
     setLocalConfigurationFile,
     setConfigProp

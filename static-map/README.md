@@ -65,6 +65,12 @@ Here some suggestions on how to improve the setup of a custom project:
 
 - ensure all the configuration path are initialized correctly. An example are the symbols for annotation and their location in the repository.
 
+- add a custom plugins definition and import only the plugins used by the app. This will reduce the size of final js bundle
+
+- use the alias `@mapstore/framework/` to have access to the components inside the folder `MapStore2/web/client/` of MapStore
+
+- use the alias `@js/` to have access to the components inside the js folder of the custom project
+
 ## Development
 
 - `npm install`
