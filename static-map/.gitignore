@@ -25,3 +25,4 @@ web/docs
 .settings/
 debug.log
 .vscode/settings.json
+!dist/node_modules/
