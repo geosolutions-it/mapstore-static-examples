@@ -8,7 +8,8 @@
             "https://maps3.geosolutionsgroup.com/geoserver/wms",
             "https://maps4.geosolutionsgroup.com/geoserver/wms",
             "https://maps5.geosolutionsgroup.com/geoserver/wms",
-            "https://maps6.geosolutionsgroup.com/geoserver/wms"
+            "https://maps6.geosolutionsgroup.com/geoserver/wms",
+            "https://gs-stable.geo-solutions.it/geoserver"
         ]
     },
     "monitorState": [
