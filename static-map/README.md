@@ -2,7 +2,19 @@
 
 This repository is an example of the map viewer of MapStore used as static client
 
-demo: https://geosolutions-it.github.io/mapstore-static-examples/static-map/dist/index.html#/
+demo timeline: https://geosolutions-it.github.io/mapstore-static-examples/static-map/dist/index.html#/
+
+demo chart: https://geosolutions-it.github.io/mapstore-static-examples/static-map/dist/index.html?map=observatories-map#/
+
+## Map configurations
+
+The map configurations are stored as static json inside the configs/ folder. This application uses the query parameter `map` that represents the name of the file to load a different configuration from the configs/ directory and by default it loads the `configs/meteorites-map.json` file.
+
+example: https://geosolutions-it.github.io/mapstore-static-examples/static-map/dist/index.html?map=observatories-map#/ loads the `configs/observatories-map.json` file.
+
+New configuration can be loaded also with the [map import](https://mapstore.readthedocs.io/en/latest/user-guide/import/) plugin.
+
+The map configuration options of MapStore are described in the [documentation](https://mapstore.readthedocs.io/en/latest/developer-guide/maps-configuration/) and it is possible to generate a new configuration by changing the map in the viewer and then get the updated map configuration with the [export plugin](https://mapstore.readthedocs.io/en/latest/user-guide/import/#export-and-import-map-context-files). It is still possible to change the map config manually but for complex visualizations that contains multiple layers, widgets and/or timeline it is suggested to rely on the export plugin.
 
 ## How to install a custom MapStore (experimental)
 

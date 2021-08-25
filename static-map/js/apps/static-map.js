@@ -9,6 +9,7 @@
 // add this binding to ensure all the streams inside components are working
 import '@mapstore/framework/libs/bindings/rxjsRecompose';
 
+import url from 'url';
 import main from '@mapstore/framework/product/main';
 import pluginsDef from '@js/plugins/def';
 import {
@@ -38,7 +39,7 @@ const version = __MAPSTORE_PROJECT_CONFIG__.version || 'dev';
 
 axios.interceptors.request.use(
     config => {
-        if (config.url && version && pathsNeedVersion.filter(url => config.url.match(url))[0]) {
+        if (config.url && version && pathsNeedVersion.filter(urlEntry => config.url.match(urlEntry))[0]) {
             return {
                 ...config,
                 params: {
@@ -67,8 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
             token: '' // this token is applied to the request defined in the localConfig authenticationRules properties
         }
     };
+    // this is an example of dynamic map loading via query param
+    // there are other possibilities such use injected map data in the page
+    // or use the internal react routing
+    // the important steps is to populate the configureMap action with a valid map config
+    const params = url.parse(window.location.href, true).query || {};
+    const mapName = params.map || 'meteorites-map';
     // load a base map configuration
-    axios.get('configs/map.json')
+    axios.get(`configs/${mapName}.json`)
         .then(({ data }) => {
             // initialize the mapstore app
             main({
