@@ -38,7 +38,7 @@
             "label": "Versión"
         },
         "errorPage": {
-            "title":"Vaya, algo salió mal",
+            "title":"Vaya, algo salió mal...",
             "subtitle":"Haga clic en el icono a continuación para volver a cargar MapStore",
             "description":"Si desea informar este error, puede enviar un correo electrónico a nuestra lista de correo",
             "descriptionAdmin":"Por favor, póngase en contacto con el administrador"
@@ -396,6 +396,11 @@
                 "createANewOne": "Crea una nueva GeoStory",
                 "deleteError": "Hubo un error al eliminar GeoStory",
                 "errorLoadingGeostories": "Hubo un error al cargar GeoStories"
+            },
+            "contexts": {
+              "title": "Contextos ({count})",
+              "titleNoCount": "Contextos",
+              "noContextAvailable": "Sin contexto disponible"
             }
         },
         "map": {
@@ -461,7 +466,6 @@
             },
             "errors": {
                 "loading": {
-                    "title": "Error al cargar el mapa",
                     "notFound": "Mapa no encontrado",
                     "notAccessible": "Mapa no accesible",
                     "unknownError": "<p> <small> Uno de los siguientes motivos podría ser la causa: </small> <ul><li> no tiene permiso para acceder </li> <li> está intentando acceder a un mapa que no existe </li> <li> el mapa se ha eliminado </li> <li>La proyección del mapa no está configurada </li></ul> <p>",
@@ -992,7 +996,8 @@
                 "combo_placeholder": "Atributo",
                 "text_placeholder": "Introduzca el texto para buscar",
                 "attribute_filter_header": "Filtro por atributo",
-                "tooltipTextField": "utiliza <b>*</b> para cualquier carácter</br>utiliza <b>.</b> para un solo carácter</br>utiliza <b>!</b> para caracteres especiales (* y .)</br>",
+                "tooltipTextField": "utiliza <b>*</b> para cualquier carácter</br>utiliza . para un solo carácter</br>utiliza <b>!</b> para caracteres especiales (* y .)</br>",
+                "tooltipTextFieldCSS": "utiliza <b>%</b> para cualquier carácter</br>utiliza <b>_</b> para un solo carácter</br>utiliza <b>\\</b> para caracteres especiales (% y _)</br>",
                 "groupField": {
                     "any": "alguna",
                     "all": "todas",
@@ -1153,7 +1158,10 @@
                 "notValidText": "Insertar un valor de texto y una coordenada válida (+|- 90° lat, +|-180° lon)",
                 "notValidCircle": "Ingrese un radio y una coordenada válida (+|- 90° lat, +|-180° lon)",
                 "newFeature": "Nuevo"
-            }
+            },
+            "geometryError": "La configuración de geometría no es válida",
+            "annotationSaveGeometryError": "El guardado está deshabilitado debido a una geometría no válida, corríjalo para guardar la anotación",
+            "resolveAllErrors": "Corrija los errores de validación antes de editar otras geometrías"
         },
         "user":{
             "login": "Iniciar sesión",
@@ -1421,7 +1429,29 @@
             "format": {
                 "noOption": "Sin opcion",
                 "loading": "Cargando..."
-            }
+            },
+            "filter": {
+                "static": {
+                    "label": "Filtro estático",
+                    "info": "El filtro se aplica siempre, incluso en la búsqueda vacía"
+                },
+                "dynamic": {
+                    "label": "Filtro dinámico",
+                    "info": "El filtro se usa cuando el texto de búsqueda está presente y se aplica en 'AND' con un filtro estático",
+                    "helpText": "Utilice la plantilla con el marcador de posición $ {searchText} para capturar la cadena de búsqueda"
+                },
+                "error": "Sintaxis XML no válida"
+            },
+            "autoSetVisibilityLimits": {
+                "label": "Establecer límite de visibilidad",
+                "tooltip": "Aplica automáticamente los límites de visibilidad sugeridos por el servidor"
+            },
+          "domainAliases": {
+            "title": "Alias de dominio",
+            "helpTooltip": "Esta opción se utiliza para dividir el contenido en varios subdominios",
+            "addAliasTooltip": "Agregar alias",
+            "removeAliasTooltip": "Eliminar alias"
+          }
         },
         "uploader": {
             "filename": "Nombre del fichero",
@@ -1584,6 +1614,7 @@
             "featureClose": "¿Realmente desea cerrar la tabla?",
             "delete": "¿Confirma la eliminación de {count} características?",
             "missingGeometry": "Geometría no encontrada",
+            "zoomObject": "Acercamiento a objeto espacial",
             "filter": {
                 "placeholders": {
                     "default": "Buscar...",
@@ -1719,7 +1750,8 @@
                 "nodatainviewport": "Sin datos en la ventana gráfica actual",
                 "timeoutExpired": "El servicio tardó demasiado tiempo para responder. Tal vez la consulta es demasiado compleja o el servidor está ocupado",
                 "genericError": "Hubo un error durante la recuperación de datos",
-                "genericErrorWithMessage": "Hubo un error durante la recuperación de datos: \"{message}\""
+                "genericErrorWithMessage": "Hubo un error durante la recuperación de datos: \"{message}\"",
+                "layerNotAvailable": "La capa {layerName} ya no está disponible"
             },
             "builder": {
                 "header": {
@@ -2793,6 +2825,10 @@
             "description": "Permite compartir el mapa de varias maneras (enlace, código QR, incrustar, redes sociales ...)",
             "title": "Compartir herramienta"
           },
+          "StreetView": {
+            "title": "Street View",
+          "description": "Herramienta para buscar imágenes de Google Street View desde el mapa"
+          },
           "StyleEditor": {
             "description": "Editor de estilo de capa",
             "title": "Editor de estilo"
@@ -3351,6 +3387,17 @@
           "successRemoved": "Sesión de usuario eliminada",
           "remove": "Restablecer sesión de usuario",
           "confirmRemove": "¿Está seguro de que desea restaurar la configuración predeterminada?"
+        },
+        "streetView": {
+          "title": "Street View",
+          "description": "Herramienta para buscar imágenes de Google Street View desde el mapa",
+          "tooltip": "Abrir la herramienta Street View",
+          "emptyTitle": "Street View",
+          "emptyDescription": "Haga clic en el mapa para comenzar a navegar por las imágenes de Street View",
+          "messages": {
+            "noDataForPosition": "no hay datos de Street View para esta",
+            "unknownError": "error desconocido, ver consola"
+          }
         }
     }
 }

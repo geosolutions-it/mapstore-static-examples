@@ -1,1 +1,0 @@
-(self.webpackChunkstatic_map=self.webpackChunkstatic_map||[]).push([[37],{3974:(e,p,t)=>{"use strict";t.r(p),t.d(p,{default:()=>a});const a=()=>(t(88662).default,{Map:t(96047).Z,Layer:t(64775).Z,Feature:t(39452).Z,MeasurementSupport:t(17432).Z,Overview:t(28798).Z,ScaleBar:t(62536).Z,DrawSupport:t(81636).Z,PopupSupport:t(89262).Z,BoxSelectionSupport:t(38272).Z})}}]);
