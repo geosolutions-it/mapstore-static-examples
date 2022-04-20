@@ -39,11 +39,11 @@
     "test:watch": "mapstore-project test:watch standard"
   },
   "devDependencies": {
-    "@mapstore/project": "1.0.18"
+    "@mapstore/project": "1.0.21"
   },
   "dependencies": {
     "font-awesome": "4.7.0",
-    "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#2021.02.xx"
+    "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#v2021.02.02"
   },
   "mapstore": {
     "apps": [
