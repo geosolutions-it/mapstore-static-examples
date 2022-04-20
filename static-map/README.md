@@ -39,7 +39,7 @@ This section shows how this repository has been setup
 
 ```json
 "dependencies": {
-    "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#2021.02.xx"
+    "mapstore": "git+https://github.com/geosolutions-it/MapStore2.git#<branch|tag>"
 }
 ```
 
