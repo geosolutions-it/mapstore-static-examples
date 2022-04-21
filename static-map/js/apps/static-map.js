@@ -21,6 +21,7 @@ import Viewer from '@js/pages/Viewer';
 import { configureMap } from '@mapstore/framework/actions/config';
 import { setControlProperty } from '@mapstore/framework/actions/controls';
 import security from '@mapstore/framework/reducers/security';
+import omit from 'lodash/omit';
 
 setLocalConfigurationFile('configs/localConfig.json');
 setConfigProp('translationsPath', ['translations', 'ms-translations']);
@@ -85,7 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     defaultState: {
                         ...securityState,
                         maptype: {
-                            mapType: 'openlayers'
+                            mapType: 'openlayers',
+                            last2dMapType: 'openlayers'
                         }
                     }
                 },
@@ -99,6 +101,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // TODO: use default main import to avoid override
             (cfg) => ({
                 ...cfg,
+                // remove epics that manage the map type for the standard product
+                appEpics: omit(cfg.appEpics, [
+                    'syncMapType',
+                    'updateLast2dMapTypeOnChangeEvents',
+                    'restore2DMapTypeOnLocationChange'
+                ]),
                 initialActions: [
                     setControlProperty.bind(null, 'toolbar', 'expanded', false),
                     configureMap.bind(null, data, 1, true)

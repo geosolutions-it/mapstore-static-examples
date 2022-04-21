@@ -6,10 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Static Map - MapStore</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
-        <script src="https://cesium.com/downloads/cesiumjs/releases/1.17/Build/Cesium/Cesium.js"></script>
-        <link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.17/Build/Cesium/Widgets/widgets.css" />
-        <script src="libs/cesium-navigation/cesium-navigation.js"></script>
-        <link rel="stylesheet" href="libs/cesium-navigation/cesium-navigation.css" />
         <link rel="stylesheet" id="theme_stylesheet" href="<%= htmlWebpackPlugin.files.css.find((fileName) => fileName.indexOf('default') !== -1) %>?v=<%= version %>" type='text/css'>
         <style>
             body {
