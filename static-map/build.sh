@@ -8,4 +8,3 @@ npm install
 echo "Building frontend"
 echo `date`
 npm run compile
-

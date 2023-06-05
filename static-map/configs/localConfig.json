@@ -51,9 +51,6 @@
                 }
             },
             {
-                "name": "Version"
-            },
-            {
                 "name": "DrawerMenu"
             },
             {
@@ -101,12 +98,6 @@
                     "activateSortLayer": false,
                     "activateLayerFilterTool": false,
                     "activateQueryTool": false
-                }
-            },
-            {
-                "name": "TOCItemsSettings",
-                "cfg": {
-                    "width": 300
                 }
             },
             {
@@ -199,9 +190,6 @@
             },
             {
                 "name": "DrawerMenu"
-            },
-            {
-                "name": "Version"
             },
             {
                 "name": "Notifications"
@@ -437,7 +425,7 @@
                 "name": "OmniBar"
             },
             {
-                "name": "BurgerMenu"
+                "name": "SidebarMenu"
             },
             {
                 "name": "Expander"

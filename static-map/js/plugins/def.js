@@ -37,7 +37,7 @@ import SearchPlugin from '@mapstore/framework/plugins/Search';
 import SearchServicesConfigPlugin from '@mapstore/framework/plugins/SearchServicesConfig';
 import SearchByBookmarkPlugin from '@mapstore/framework/plugins/SearchByBookmark';
 import SettingsPlugin from '@mapstore/framework/plugins/Settings';
-import * as SharePlugin from '@mapstore/framework/plugins/Share';
+import SidebarMenuPlugin from '@mapstore/framework/plugins/SidebarMenu';
 import StyleEditorPlugin from '@mapstore/framework/plugins/StyleEditor';
 import SwipePlugin from '@mapstore/framework/plugins/Swipe';
 import TOCItemsSettingsPlugin from '@mapstore/framework/plugins/TOCItemsSettings';
@@ -45,7 +45,6 @@ import TOCPlugin from '@mapstore/framework/plugins/TOC';
 import TimelinePlugin from '@mapstore/framework/plugins/Timeline';
 import ToolbarPlugin from '@mapstore/framework/plugins/Toolbar';
 import TutorialPlugin from '@mapstore/framework/plugins/Tutorial';
-import VersionPlugin from '@mapstore/framework/plugins/Version';
 import WidgetsBuilderPlugin from '@mapstore/framework/plugins/WidgetsBuilder';
 import WidgetsPlugin from '@mapstore/framework/plugins/Widgets';
 import WidgetsTrayPlugin from '@mapstore/framework/plugins/WidgetsTray';
@@ -90,7 +89,7 @@ export default {
         SearchServicesConfigPlugin,
         SearchByBookmarkPlugin,
         SettingsPlugin,
-        SharePlugin,
+        SidebarMenuPlugin,
         StyleEditorPlugin,
         SwipePlugin,
         TOCItemsSettingsPlugin,
@@ -98,7 +97,6 @@ export default {
         TimelinePlugin,
         ToolbarPlugin,
         TutorialPlugin,
-        VersionPlugin,
         WidgetsBuilderPlugin,
         WidgetsPlugin,
         WidgetsTrayPlugin,
