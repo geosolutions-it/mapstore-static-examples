@@ -84,11 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 pages,
                 initialState: {
                     defaultState: {
-                        ...securityState,
-                        maptype: {
-                            mapType: 'openlayers',
-                            last2dMapType: 'openlayers'
-                        }
+                        ...securityState
                     }
                 },
                 appReducers: {

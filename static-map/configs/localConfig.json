@@ -93,11 +93,7 @@
             {
                 "name": "TOC",
                 "cfg": {
-                    "activateMetedataTool": false,
-                    "activateMapTitle": false,
-                    "activateSortLayer": false,
-                    "activateLayerFilterTool": false,
-                    "activateQueryTool": false
+                    "activateSortLayer": false
                 }
             },
             {
@@ -286,7 +282,6 @@
             {
                 "name": "TOC",
                 "cfg": {
-                    "activateMetedataTool": false,
                     "layerOptions": {
                         "legendOptions": {
                             "WMSLegendOptions": "forceLabels:on",
