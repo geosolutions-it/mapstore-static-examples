@@ -1,0 +1,23 @@
+{
+    "proxyUrl": {
+        "url": "proxy/?url=",
+        "autoDetectCORS": true,
+        "useCORS": [
+            "https://maps1.geosolutionsgroup.com/geoserver/wms",
+            "https://maps2.geosolutionsgroup.com/geoserver/wms",
+            "https://maps3.geosolutionsgroup.com/geoserver/wms",
+            "https://maps4.geosolutionsgroup.com/geoserver/wms",
+            "https://maps5.geosolutionsgroup.com/geoserver/wms",
+            "https://maps6.geosolutionsgroup.com/geoserver/wms",
+            "https://gs-stable.geo-solutions.it/geoserver"
+        ]
+    },
+    "monitorState": [
+        {
+            "name": "mapType",
+            "path": "maptype.mapType"
+        }
+    ],
+    "projectionDefs": [],
+    "authenticationRules": []
+}

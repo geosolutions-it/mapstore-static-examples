@@ -1,0 +1,58 @@
+{
+  "name": "mapstore-api",
+  "version": "1.0.0",
+  "description": "mapstore project",
+  "eslintConfig": {
+    "extends": [
+      "@mapstore/eslint-config-mapstore"
+    ],
+    "parserOptions": {
+      "babelOptions": {
+        "configFile": "./node_modules/mapstore/build/babel.config.js"
+      }
+    },
+    "globals": {
+      "__MAPSTORE_PROJECT_CONFIG__": false,
+      "__MAPSTORE_EXTENSION_CONFIG__": false
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all",
+      "not IE 11",
+      "not UCAndroid 12.12"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "compile": "mapstore-project compile standard",
+    "lint": "eslint js --ext .jsx,.js",
+    "start": "mapstore-project start standard",
+    "test": "mapstore-project test standard",
+    "test:watch": "mapstore-project test:watch standard"
+  },
+  "devDependencies": {
+    "@mapstore/project": "git+https://github.com/geosolutions-it/mapstore-project.git#2024.02.xx"
+  },
+  "dependencies": {
+    "mapstore": "git+https://github.com/allyoucanmap/MapStore2.git#2024.02.xx"
+  },
+  "mapstore": {
+    "cesiumBaseUrl": false,
+    "apps": [
+      "js/apps"
+    ],
+    "html": [
+      ""
+    ],
+    "themes": [
+      "themes/"
+    ]
+  }
+}

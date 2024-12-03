@@ -1,0 +1,24 @@
+@import "~mapstore/web/client/themes/default/theme.less";
+@import "variables.less";
+
+.page,
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#mapstore-burger-menu .dropdown-menu {
+    z-index: 1020;
+}
+
+#mapstore-sidebar-menu-container {
+    background-color: var(--ms-main-bg, #ffffff);
+}
+
+.page-map > .ms2-border-layout-body > .ms2-border-layout-content {
+    overflow: hidden;
+}
