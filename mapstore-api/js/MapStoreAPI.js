@@ -25,6 +25,7 @@ import Viewer from '@js/pages/Viewer';
 import main from '@mapstore/framework/product/main';
 import { createPlugin } from '@mapstore/framework/utils/PluginsUtils';
 import { Observable } from 'rxjs';
+import security from '@mapstore/framework/reducers/security';
 
 setLocalConfigurationFile('');
 
@@ -125,9 +126,9 @@ function initAPI() {
             Object.keys(localConfig).forEach((key) => {
                 setConfigProp(key, localConfig[key]);
             });
-            let security;
+            let securityState;
             if (user || token) {
-                security = {
+                securityState = {
                     user,
                     token // this token is applied to the request defined in the localConfig authenticationRules properties
                 };
@@ -144,7 +145,7 @@ function initAPI() {
                 }],
                 initialState: {
                     defaultState: {
-                        ...(security && { security })
+                        ...(securityState && { security: securityState })
                     }
                 },
                 appReducers: {
