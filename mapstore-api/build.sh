@@ -8,3 +8,7 @@ npm install
 echo "Building frontend"
 echo `date`
 npm run compile
+
+echo "Compress dist folder"
+echo `date`
+npm run compress

@@ -35,10 +35,12 @@
     "lint": "eslint js --ext .jsx,.js",
     "start": "mapstore-project start standard",
     "test": "mapstore-project test standard",
-    "test:watch": "mapstore-project test:watch standard"
+    "test:watch": "mapstore-project test:watch standard",
+    "compress": "node ./compress.js"
   },
   "devDependencies": {
-    "@mapstore/project": "git+https://github.com/geosolutions-it/mapstore-project.git#2024.02.xx"
+    "@mapstore/project": "git+https://github.com/geosolutions-it/mapstore-project.git#2024.02.xx",
+    "archiver": "7.0.1"
   },
   "dependencies": {
     "mapstore": "git+https://github.com/allyoucanmap/MapStore2.git#2024.02.xx"
